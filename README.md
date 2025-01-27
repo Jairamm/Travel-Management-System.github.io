@@ -34,7 +34,8 @@ The Travel Management System is a comprehensive platform designed to simplify tr
 Here are some visual representations of the system:
 
 1. **Signup Page**
-   ![Signup Page](path/to/signup_page_image.png)
+   ![image](https://github.com/user-attachments/assets/dc44d2a0-93f4-4d44-827f-587faf53302b)
+
 
 2. **Login Page**
    ![Login Page](path/to/login_page_image.png)
