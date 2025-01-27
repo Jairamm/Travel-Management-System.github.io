@@ -1,0 +1,352 @@
+ <?php
+session_start();
+if(isset($_POST['submit'])){
+  $name = $_POST['name'] ?:'guest';
+	$_SESSION['name']= $name;
+  $ids =  $_SESSION['user'];
+}
+?>
+
+<?php 
+if(!isset($_SESSION['name'])){
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <style>
+      .car {
+        height: 550px;
+        width: 400px;
+      }
+      hr{
+        background-color: black;
+      }
+      h1 {
+        text-align: center;
+      }
+      input{
+       width: 643px ;
+       height: 60px ;
+       border: none;
+       text-decoration: none;
+       border-radius: 20px ;
+       border: 2px solid  black;
+       background-color:lightblue;
+       color: black;
+      }
+    </style>
+    <link rel="stylesheet" href="/boot/css/bootstrap.min.css" />
+    <script src="/boot/js/bootstrap.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+      integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+      crossorigin="anonymous"
+    />
+
+    <title>Test2</title>
+
+    <style>
+      .h7 {
+        font-size: 0.9rem;
+      }
+     body{
+      background-color: yellow;
+     }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid my-5">
+      <div class="row">
+        <div class="col-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title"> Gallery 💫</h5>
+              <h6 class="card-subtitle mb-2 text-muted"></h6>
+              <p class="card-text">
+                Explore Images of Gallery of amazing Picture and More...
+              </p>
+              <a href="https://yandex.com/images/search?text=traveling" class="btn btn-sm btn-primary">Move To</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 car">
+         
+
+          <!--- Post Form Begins -->
+          <section class="card">
+            <div class="card-header">
+              <h1>Welcome to Chating Room</h1>
+               <div class="text-right"> 
+                <button type="button"id="btn" value="Send" class="btn btn-primary">Send</button></div>
+              </ul>
+            </div>
+            <div class="form-group car container p-0 m-0">
+                 <!-- <form method="post"></form>
+	<input type="text" name="name"placeholder="Write Something Here " required>
+	<button type="submit" class="btn btn-primary">Send</button></div> -->
+</form>
+<?php } else { ?>
+
+<input type="text" id="msg"title="Message Box"placeholder="Something Write Here...">
+<hr >
+ <div id="msg_box"></div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js" ></script>
+<script>
+var conn = new WebSocket('ws://localhost:8080');
+conn.onopen = function(e) {
+    console.log("Connection established!");
+    
+};
+
+conn.onmessage = function(e) {
+	var getData=jQuery.parseJSON(e.data);
+  var html = "<b>" + getData.name + "</b>: <span style='color:red;'>" + getData.msg + "</span><br/>";
+	jQuery('#msg_box').append(html);
+};
+
+jQuery('#btn').click(function(){
+	var msg=jQuery('#msg').val();
+	var name="<?php echo $_SESSION['user']?>";
+	var content={
+		msg:msg,
+		name:name
+	};
+	conn.send(JSON.stringify(content));
+	
+	 var html = "<b> Me </b>: <span style='color:green;'>" + msg + "</span><br/>";
+	jQuery('#msg_box').append(html);
+	jQuery('#msg').val('');
+});
+</script>
+
+<?php } ?>
+</div>
+            <div class="card-body">
+              <div class="tab-content" id="myTabContent">
+                <div
+                  class="tab-pane fade show active"
+                  id="posts"
+                  role="tabpanel"
+                  aria-labelledby="posts-tab"
+                ></div>
+              </div>
+            </div>
+          </section>
+          <!--- Post Form Ends -->
+
+          <!-- Post Begins -->
+          <section class="card mt-4">
+            <div class="border p-1">
+              <!-- post header -->
+              <div class="row m-0">
+                <div class="dropdown">
+                
+
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item text-primary" href="#">Edit</a>
+                    <a class="dropdown-item text-primary" href="#">Delete</a>
+                  </div>
+                </div>
+              </div>
+              <!-- post body -->
+
+              <footer class="">
+                <!-- collapsed comments begins -->
+                <div class="collapse" id="collapseExample">
+                  <div
+                    class="card border border-right-0 border-left-0 border-bottom-0 mt-1">
+                    <!-- new comment form -->
+                    <section class="mt-3">
+                      <form action="">
+                        <div class="input-group input-group">
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Write Comment"
+                            aria-label="Recipient's username"
+                            aria-describedby="basic-addon2"
+                          />
+                          <div class="input-group-append">
+                            <a
+                              class="text-decoration-none text-white btn btn-primary"
+                              href="#"
+                              role="button"
+                              >Comment</a
+                            >
+                          </div>
+                        </div>
+                      </form>
+                    </section>
+                    <!-- comment card bgins -->
+                    <section>
+                      <div class="card p-2 mt-3">
+                        <!-- comment header -->
+                        <div class="d-flex">
+                          <div class="">
+                            <a class="text-decoration-none" href="#">
+                              <img
+                                class="profile-pic"
+                                src="https://cdn3.iconfinder.com/data/icons/avatars-round-flat/33/avat-01-512.png"
+                                width="40"
+                                height="40"
+                                alt="..."
+                              />
+                            </a>
+                          </div>
+                          <div class="flex-grow-1 pl-2">
+                            <a
+                              class="text-decoration-none text-capitalize h6 m-0"
+                              href="#"
+                              >Tarzan</a
+                            >
+                            <p class="small m-0 text-muted">27 mins ago</p>
+                          </div>
+                          <div>
+                            <div class="dropdown">
+                              <a
+                                class=""
+                                href="#"
+                                role="button"
+                                id="dropdownMenuLink"
+                                data-toggle="dropdown"
+                                aria-haspopup="true"
+                                aria-expanded="false"
+                              >
+                                <i class="fas fa-chevron-down"></i>
+                              </a>
+
+                              <div
+                                class="dropdown-menu"
+                                aria-labelledby="dropdownMenuLink"
+                              >
+                                <a class="dropdown-item text-primary" href="#"
+                                  >Edit</a
+                                >
+                                <a class="dropdown-item text-primary" href="#"
+                                  >Delete</a
+                                >
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- comment header -->
+                        <!-- comment body -->
+                        <div class="card-body p-0">
+                          <p class="card-text h7 mb-1">
+                            Some quick example text to build on the card title
+                            and make up the bulk of the card's content.
+                          </p>
+                          <a class="card-link small" href="#">
+                            <i class="far fa-thumbs-up"></i> 20 Like
+                          </a>
+                        </div>
+                      </div>
+                    </section>
+                    <!-- comment card ends -->
+                  </div>
+                </div>
+                <!-- collapsed comments ends -->
+              </footer>
+              <!-- post footer ends -->
+            </div>
+          </section>
+          <!-- Post Ends -->
+        </div>
+        <div class="col-3">
+          <div class="card">
+            <div class="card-body p-3">
+              <h5 class="card-title m-0">Friends</h5>
+              <div class="list-group list-group-flush">
+                <a
+                  href="#"
+                  class="list-group-item list-group-item-action text-primary"
+                >
+                  Shishir Mishra
+                </a>
+                <a
+                  href="#"
+                  class="list-group-item list-group-item-action text-primary"
+                  >Manmohan Pathak</a
+                >
+                <a
+                  href="#"
+                  class="list-group-item list-group-item-action text-primary"
+                  >R.V Mishra</a
+                >
+                <a
+                  href="#"
+                  class="list-group-item list-group-item-action text-primary"
+                  ></a
+                >
+                <a href="#" class="btn btn-sm btn-primary">View All</a>
+              </div>
+            </div>
+          </div>
+          <div class="card mt-4">
+            <div class="card-body p-3">
+              <h5 class="card-title m-0">Users</h5>
+              <div class="list-group list-group-flush">
+                <a
+                  href="#"
+                  class="list-group-item list-group-item-action text-primary"
+                >
+                  @Cra320
+                </a>
+                <a
+                  href="#"
+                  class="list-group-item list-group-item-action text-primary"
+                  >@insta450</a
+                >
+                <a
+                  href="#"
+                  class="list-group-item list-group-item-action text-primary"
+                  >@MorbiXXy </a
+                >
+                <a
+                  href="#"
+                  class="list-group-item list-group-item-action text-primary"
+                  >@Porta_MIx</a
+                >
+                <a href="#" class="btn btn-sm btn-primary">View All</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

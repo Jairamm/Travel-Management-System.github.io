@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+      #con {
+        margin: 0px auto;
+        height: 600px;
+        width: 1200px;
+      }
+      body{
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="con"></div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+      const map = L.map("con").setView([ 27.43449000,82.40281000], 10);
+      const isRetina = L.Browser.retina;
+      const baseUrl =
+        "https://maps.geoapify.com/v1/tile/osm-bright/{z}/{x}/{y}.png?apiKey=dfb1e45f7e404ed7ac27d278c2c13851";
+      const retinaUrl =
+        "https://maps.geoapify.com/v1/tile/osm-bright/{z}/{x}/{y}@2x.png?apiKey=dfb1e45f7e404ed7ac27d278c2c13851";
+
+      L.tileLayer(isRetina ? retinaUrl : baseUrl, {
+        maxZoom: 20,
+      }).addTo(map);
+    </script>
+  </body>
+</html>

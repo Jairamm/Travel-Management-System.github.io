@@ -1,0 +1,11 @@
+ .checkOne{
+     width: 10em;
+     height: 3em;
+     background-color:red;
+     border: 1p solid black;
+     
+    }
+   
+    .checkOne:active{
+        background-color: green;
+    }

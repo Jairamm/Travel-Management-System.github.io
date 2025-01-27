@@ -1,0 +1,41 @@
+/* Style for the hotel data table */
+.hotel-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: left;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header row styling */
+.hotel-table thead tr {
+   background-color: blue;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Table data cell styling */
+.hotel-table th{
+      background-color: blue;
+}
+.hotel-table td {
+    padding: 12px 15px;
+    background-color: lightblue;
+}
+
+
+
+/* Hover effect for table rows */
+.hotel-table tbody tr:hover {
+    background-color: #d1e7fd;
+}
+
+
+
+.hotel-table .book-now:hover {
+    background-color: #2980b9;
+}

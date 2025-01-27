@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Open_world Travaler</title>
+  <link rel="icon" href="https://yandex-images.clstorage.net/5nDP3u136/6699f6gXw/UcY4HBKppDvmE-uvZY4M1aOK3LLnVwcpvDiKuCNNWWvXXiy9is3xAEctyaXh0SXLBjoLs2xV6gicnp8yu95lhFmXfRUjpKhit1rDymC-EPGz9_DHx1YbWPQU1tQjYQlOu3Ih5XtxfMmXwCFpTBTcMgdrduIcIMtN5fcz3u4XbPSVxnj8ckm9M0pbZrMdqpAZ7wuo6n9ahwSofB8EE3X0ik4PxO27EUwZxzSB_VTYTJbzwwZOzIHjZc1P0wOOM2R0wU4QhCa1rYv6V7YHrQYgDT-zVNq3DrOY_KzfyOdJnK66HwTBm2ncxZN4PXU8MLiOM9-m1lSpT5HlA9cP5lOU3GWClOTaNfVb-tMGM4XWXF3nW9QOLxpvmEyAl3B_wUD2Eh-k6b9JbGErNFml2ACsDkPnirpodZdN_Utbj4YrEFThCuTUxtHRY36XTiOhHmh9mydwNsdSgwQE_E9QM0mQak6rqB3viWgNJwwpLTiM8KYvX8qyYGXLTW2f34smP7x0tdZY0K4hgefGH7YDZRY4XT_DuL7LPreYKDTXrB8FEGLGn0AtkykYSbMoGbl4uKiSz6OGLmBFox2Jz2uTauOgZHH-8Ki-1SHbNlu-Rykm1FF3q7gm6xbThMykq-A_QXg2shfMOSdFqA2XWBGdAFzgmktnyu4wiVMRySeHiw7DsHDpSrjccrHJSzLXBg9BsgAtFw8wMks-p8zMfC8s9wVwHuJTRDHnkcgJy9wV7azMXBJv0xo-YKFv-cGn48uuk2AQlbqYCNL5ubuWx24DSbo4gT-DWBYn2tuIBJi3HJM19CpGj9S1A6EwGdsg2QV4QCDKp9OOdkQRR9VVT1-Tyu8UHN0y9Pg2dW3DBtN-C026JKWjQ9yOr9bzUBioA1QP7fiqtpuA8ZPlEPXfkNX9XAB0Un9njiLEde_h3RsPh2K_DCxpIuCoPv1xI16Tboe9Iryls8O4WiM-75CUNLOsm5mE">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="add.css">
+  <link rel="stylesheet" href="search.css">
+<link rel="icon" href="https://yandex-images.clstorage.net/5nDP3u136/6699f6gXw/UcY4HBKppDvmE-uvZY4M1aOK3LLnVwcpvDiKuCNNWWvXXiy9is3xAEctyaXh0SXLBjoLs2xV6gicnp8yu95lhFmXfRUjpKhit1rDymC-EPGz9_DHx1YbWPQU1tQjYQlOu3Ih5XtxfMmXwCFpTBTcMgdrduIcIMtN5fcz3u4XbPSVxnj8ckm9M0pbZrMdqpAZ7wuo6n9ahwSofB8EE3X0ik4PxO27EUwZxzSB_VTYTJbzwwZOzIHjZc1P0wOOM2R0wU4QhCa1rYv6V7YHrQYgDT-zVNq3DrOY_KzfyOdJnK66HwTBm2ncxZN4PXU8MLiOM9-m1lSpT5HlA9cP5lOU3GWClOTaNfVb-tMGM4XWXF3nW9QOLxpvmEyAl3B_wUD2Eh-k6b9JbGErNFml2ACsDkPnirpodZdN_Utbj4YrEFThCuTUxtHRY36XTiOhHmh9mydwNsdSgwQE_E9QM0mQak6rqB3viWgNJwwpLTiM8KYvX8qyYGXLTW2f34smP7x0tdZY0K4hgefGH7YDZRY4XT_DuL7LPreYKDTXrB8FEGLGn0AtkykYSbMoGbl4uKiSz6OGLmBFox2Jz2uTauOgZHH-8Ki-1SHbNlu-Rykm1FF3q7gm6xbThMykq-A_QXg2shfMOSdFqA2XWBGdAFzgmktnyu4wiVMRySeHiw7DsHDpSrjccrHJSzLXBg9BsgAtFw8wMks-p8zMfC8s9wVwHuJTRDHnkcgJy9wV7azMXBJv0xo-YKFv-cGn48uuk2AQlbqYCNL5ubuWx24DSbo4gT-DWBYn2tuIBJi3HJM19CpGj9S1A6EwGdsg2QV4QCDKp9OOdkQRR9VVT1-Tyu8UHN0y9Pg2dW3DBtN-C026JKWjQ9yOr9bzUBioA1QP7fiqtpuA8ZPlEPXfkNX9XAB0Un9njiLEde_h3RsPh2K_DCxpIuCoPv1xI16Tboe9Iryls8O4WiM-75CUNLOsm5mE">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Kalnia+Glaze:wght@100..700&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+AT:ital,wght@0,100..400;1,100..400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Kalnia+Glaze:wght@100..700&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+AT:ital,wght@0,100..400;1,100..400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Kalnia+Glaze:wght@100..700&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+  </style>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Kalnia+Glaze:wght@100..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+AT:ital,wght@0,100..400;1,100..400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Kalnia+Glaze:wght@100..700&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+AT:ital,wght@0,100..400;1,100..400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+    .dark-mode {
+      background-color: black;
+      color: white;
+    }
+
+    li {
+      list-style: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- navbar -->
+  <nav class="navbar   fixed-top p-0">
+    <div class="container-fluid  bg-light">
+      <a class="navbar-brand" href="#"><img
+          src="https://img.icons8.com/?size=100&id=Oma9tSIHTMlv&format=png&color=000000" alt="..." height="50px "><span
+          class="text-first-head">Open_world</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><a href="login_sign.html">Login/SignUp</a></h5>
+
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body second ">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="routing1.html"><img
+                  src="https://img.icons8.com/?size=100&id=26075&format=png&color=000000" alt="..." height="30px "> Trip
+                Plan</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="weather.html"><img
+                  src="https://img.icons8.com/?size=100&id=59759&format=png&color=000000" alt="..." height="30px ">
+                Weather</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="flight.php"><img src="https://img.icons8.com/?size=100&id=8771&format=png&color=000000"
+                  alt="..." height="30px "> Flight</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="flight.php"><img src="https://img.icons8.com/?size=100&id=60605&format=png&color=000000"
+                  alt="..." height="30px "> Hotels</a>
+            </li> -->
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="#"><img src="https://img.icons8.com/?size=100&id=26075&format=png&color=000000"
+                  alt="..." height="30px "> ChatBot</a>
+            </li> -->
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="maps.html"><img
+                  src="https://img.icons8.com/?size=100&id=8212&format=png&color=000000" alt="..." height="30px "> World
+                Maps</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <img src="https://img.icons8.com/?size=100&id=11781&format=png&color=000000" height="30px" alt="...">
+                Account
+              </a>
+              <ul class="dropdown-menu first  ">
+                <li><a class="dropdown-item" href="profile.php"><img
+                      src="https://img.icons8.com/?size=100&id=25618&format=png&color=000000" height="30px" alt="..">
+                    Profile</a></li>
+                <li><a class="dropdown-item" href="https://www.lonelyplanet.com/articles/best-places-to-visit-in-india"><img
+                      src="https://img.icons8.com/?size=100&id=12621&format=png&color=000000" height="30px" alt="..">
+                    Blogs</a></li>
+                <li>
+                  <a class="dropdown-item" href="feedback.php"><img
+                      src="https://img.icons8.com/?size=100&id=8212&format=png&color=000000" height="30px" alt="..">
+                    Feedback</a>
+                </li>
+                <li><a class="dropdown-item" href="web1\index.html"><img
+                      src="https://img.icons8.com/?size=100&id=7781&format=png&color=000000" height="30px" alt="..">
+                    Live Chat</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex mt-3" role="search" action="" >
+            <input class="form-control me-2 search-box" id="search" name="searchable " type="search"
+              placeholder="Search Services" id="search" aria-label="Search" autocomplete="off">
+            <button class="btn btn-outline-success" type="button" onclick="sebtn()"id='sea' >Search</button>
+          </form>
+          <br>
+          <div id="result-box">
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="whatsapp-icon">
+    <a href="web1/index.html" target="_blank">
+      <img src="https://img.icons8.com/?size=100&id=30448&format=png&color=000000" height="50px" alt="live Chat">
+    </a>
+  </div>
+
+  <!-- main -->
+  <main>
+    <section class="py-5 text-center container-fluid  ima">
+      <div class="row py-lg-5 ">
+        <div class="col-lg-6 col-md-8 mx-auto">
+          <h1 class="fw-light text-second text-light ">Effortless Travel Planning!</h1>
+          <h1 class="fw-light text-second text-light ">Let AI Be Your Expert Guide.</h1>
+          <p class="lead  text-third   text-light ">Bid farewell to generic holiday packages| Get Your AI-Personalised
+            Itineraries.</p>
+          <p>
+            <!-- <a href="#" class="btn btn-secondarymy-2">Main call to action</a> -->
+            <!-- <a href="trips.html" class="btn btn-secondary second  my-2 data-bs-toggle="modal" data-bs-target="#staticBackdrop"">Plan Itinerary For Free!</a> -->
+            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Plan
+              Itinerary For Free!</button>
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content  bg-warning">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">Trip Info ! Enjoy Trip !</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="cityForm" action="routing1.html" method="get" >
+              <div class="row g-3 align-items-center">
+                <div class="col-auto">
+                  <label for="city1" class="col-form-label"> From </label>
+                </div>
+                <div class="col-auto">
+                  <input type="text" id="city1"name='city1' class="form-control" aria-describedby="passwordHelpInline" required>
+                </div>
+                <div class="col-auto">
+                  <span id="passwordHelpInline" class="form-text">
+                    Start city with ZipCode .
+                  </span>
+                </div>
+              </div>
+              <hr>
+              <div class="row g-3 align-items-center">
+                <div class="col-auto">
+                  <label for="city2" class="col-form-label">To</label> &emsp;
+                </div>
+                <div class="col-auto">
+                  <input type="text" id="city2"name='city2' class="form-control" aria-describedby="passwordHelpInline" required>
+                </div>
+                <div class="col-auto">
+                  <span id="passwordHelpInline" class="form-text">
+                    Destination City with ZipCode.
+                  </span>
+                </div>
+              </div>
+              <hr>
+              <div class="row g-3 align-items-center">
+                <div class="col-auto">
+                  <label for="inputPassword6" class="col-form-label"></label>
+                </div>
+                <div class="col-auto">
+                  <input type="text" id="inputPassword6" class="form-control"name='max' aria-describedby="passwordHelpInline"
+                    placeholder="Max Speed >10" required>
+                </div>
+                <div class="col-auto">
+                  <!-- check box1 -->
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" value="drive"name='mode' id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault" >
+                     Car
+                    </label>
+                  </div>
+                  <!-- check box2 -->
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" value="walk"name='mode' id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                     Walk
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <button class="btn btn-success position-relative top-0 start-50 translate-middle-x " id="submit" type="submit"
+               >Go Now</button>
+            </form>
+          </div>
+          <!-- main data  -->
+        </div>
+        <div class="modal-footer">
+          <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" id ="submit" class="btn btn-primary">Check</button> -->
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <!-- modal end  -->
+    <div class="album py-5 second  ">
+      <div class="container-fluid">
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          <div class="col">
+            <div class="card shadow-sm">
+            <img src="https://lp-cms-production.imgix.net/2024-09/shutterstock2454269837.jpg?fit=crop&w=1200&auto=format&q=75" alt="">
+              <div class="card-body">
+                <p class="card-text">This historically rich city often forms part of India's most popular tourist circuit: The Golden Triangle, linking Delhi, Agra and Jaipur. Of course, the biggest reason to visit Agra is to see the Taj Mahal, one of the modern-day Seven Wonders of the World. </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Blogs</button> -->
+                  </div>
+                  <button type="button" class="btn btn-sm btn-outline-secondary" onclick="location.href='https://www.lonelyplanet.com/articles/best-places-to-visit-in-india'">Read More</button>
+                  <!-- <small class="text-body-secondary">Rs:4500/person+GST</small> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+             <img src="https://lp-cms-production.imgix.net/2024-08/GettyRF504541675.jpg?fit=crop&w=1200&auto=format&q=75" alt="">
+              <div class="card-body">
+                <p class="card-text">The former summer capital of the British Raj, the hill station of Darjeeling is nestled in the lap of the Himalayas. Kanchenjunga (Khangchendzonga) – the world's third-highest mountain at 8586m (28,169ft) – looks benevolently over this town ..</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                  </div>
+                  <button type="button" class="btn btn-sm btn-outline-secondary"onclick="location.href='https://www.lonelyplanet.com/articles/best-places-to-visit-in-india'">Read More</button>
+                  <!-- <small class="text-body-secondary">Rs:4500/person+GST</small> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="https://lp-cms-production.imgix.net/2024-10/India-Goa-Palolem-John-Harper-GettyImages-521660572.jpg?fit=crop&w=1200&auto=format&q=75" alt="">
+              <div class="card-body">
+                <p class="card-text">One of India’s smallest states, Goa is a top holiday spot thanks to its sun, sand, food, and vibes. Despite its small size, the state is culturally rich, with unique music, food, dance, and architecture, influenced by four centuries of Portuguese colonial rule. </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                  </div>
+                  <button type="button" class="btn btn-sm btn-outline-secondary"onclick="location.href='https://www.lonelyplanet.com/articles/best-places-to-visit-in-india'">Read More</button>
+                  <!-- <small class="text-body-secondary">Rs:5500/person+GST</small> -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card shadow-sm">
+             <img src="https://lp-cms-production.imgix.net/2024-09/shutterstockRF297625991.jpg?fit=crop&w=1200&auto=format&q=75" alt="">
+              <div class="card-body">
+                <p class="card-text"> The biggest attraction here is the living city inside Jaisalmer Fort. Inside, you will find havelis (traditional manors), royal palaces, timeless Hindu and Jain temples, and stalls selling an assortment of locally-made artifacts, accessories, jewelry and paintings.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                  </div>
+                  <button type="button" class="btn btn-sm btn-outline-secondary"onclick="location.href='https://www.lonelyplanet.com/articles/best-places-to-visit-in-india'">Read More</button>
+                  <!-- <small class="text-body-secondary">Rs:4000/person+GST</small> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+             <img src="https://lp-cms-production.imgix.net/2024-09/shutterstock2483760103.jpg?fit=crop&w=1200&auto=format&q=75" alt="">
+              <div class="card-body">
+                <p class="card-text">A lush paradise following India’s western coast, Kerala is blessed with beautiful beaches, placid backwaters, rich wildlife, myriad art forms and a diverse culture that more than justifies its celebrity status.Try to catch a performance of Kathakali or Mohiniyattam dance.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                  </div>
+                  <button type="button" class="btn btn-sm btn-outline-secondary"onclick="location.href='https://www.lonelyplanet.com/articles/best-places-to-visit-in-india'">Read More</button>
+                  <!-- <small class="text-body-secondary">Rs:4500/person+GST</small> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+             <img src="https://lp-cms-production.imgix.net/2023-11/GettyImages-1046313926.jpg?fit=crop&w=1200&auto=format&q=75" alt="">
+              <div class="card-body">
+                <p class="card-text">A mystic land in the high Himalayas, Ladakh is blessed with stunning vistas, clear skies and dramatically picturesque mountain valleys. It is the ideal spot for anyone looking to rewind, digitally detox or connect with nature.Bear in mind that while summer is the best season to visit Ladakh....</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                  </div>
+                  <button type="button" class="btn btn-sm btn-outline-secondary"onclick="location.href='https://www.lonelyplanet.com/articles/best-places-to-visit-in-india'">Read More</button>
+                  <!-- <small class="text-body-secondary">Rs:3500/person+GST</small> -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card shadow-sm">
+             <img src="https://lp-cms-production.imgix.net/2024-04/GettyImages-1828082685.jpg?fit=crop&w=1200&auto=format&q=75" alt="">
+              <div class="card-body">
+                <p class="card-text">Madhya Pradesh sits in the heart of India – a vast territory known as the "tiger state" because of its tiger-stalked national parks, sanctuaries and reserves. It's tough to choose between the state's parks, which are famed for their successful conservation efforts. </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                  </div>
+                  <button type="button" class="btn btn-sm btn-outline-secondary"onclick="location.href='https://www.lonelyplanet.com/articles/best-places-to-visit-in-india'">Read More</button>
+                  <!-- <small class="text-body-secondary">Rs:4900/person+GST</small> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="https://lp-cms-production.imgix.net/2024-09/shutterstock1084338836.jpg?fit=crop&w=1200&auto=format&q=75" alt="">
+              <div class="card-body">
+                <p class="card-text">It’s a region ideal for those who love adventure, enjoy trying new and exciting cuisines, and want to understand India's Adivasi (indigenous) culture. Definitely stop by the village of Mawlynnong near the Bangladesh border ....</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                  </div>
+                  <button type="button" class="btn btn-sm btn-outline-secondary"onclick="location.href='https://www.lonelyplanet.com/articles/best-places-to-visit-in-india'">Read More</button>
+                  <!-- <small class="text-body-secondary">Rs:4500/person+GST</small> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="https://lp-cms-production.imgix.net/2022-09/shutterstockRF_1212004570.jpg?fit=crop&w=1200&auto=format&q=75" alt="">
+              <div class="card-body">
+                <p class="card-text">Odisha (formerly Orissa) is a state of many merits. As well as a rich religious heritage, it boasts good (if little-known) food, Indigenous arts and crafts, natural beauty, thriving wildlife and fascinating tribal culture. The history of Buddhism in India is also on display...</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                  </div>
+                  <button type="button" class="btn btn-sm btn-outline-secondary"onclick="location.href='https://www.lonelyplanet.com/articles/best-places-to-visit-in-india'">Read More</button>
+                  <!-- <small class="text-body-secondary">Rs:4500/person+GST</small> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </main>
+  <footer class="container py-5">
+    <div class="row">
+      <div class="col-12 col-md">
+        <img
+          src="https://img.icons8.com/?size=100&id=Oma9tSIHTMlv&format=png&color=000000" alt="..." height="50px ">
+        <small class="d-block mb-3 text-body-secondary"><b>Open_World.org <br> © 2024–2025</b></small>
+        <small class="d-block mb-3 text-body-secondary"></small>
+       <a href="https://www.instagram.com/hariompandey20060/"> <img src="https://img.icons8.com/?size=100&id=119026&format=png&color=000000" alt="" height="40px"></a>  <a href="https://wa.me/7275359879"><img src="https://img.icons8.com/?size=100&id=16713&format=png&color=000000" alt="" height="40px"></a>  <a href=""><img src="https://img.icons8.com/?size=100&id=118497&format=png&color=000000" alt="" height="40px"></a>
+        <ul>
+          <!-- <li><img src="https://img.icons8.com/?size=100&id=118497&format=png&color=000000" alt="" height="50px"></li> -->
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Features</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="link-secondary text-decoration-none" href="flight.php">Search Flight </a></li>
+          <li><a class="link-secondary text-decoration-none" href="routing1.html">Calculate Distance</a></li>
+          <li><a class="link-secondary text-decoration-none" href="maps.html">City Map</a></li>
+          <li><a class="link-secondary text-decoration-none" href="weather.html">Check Weather</a></li>
+          <!-- <li><a class="link-secondary text-decoration-none" href="#">More</a></li>
+          <li><a class="link-secondary text-decoration-none" href="#">Last time</a></li> -->
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Resources</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="link-secondary text-decoration-none" href="feedback.php">Contact Us</a></li>
+          <li><a class="link-secondary text-decoration-none" href="flight.php">Hotels Checker</a></li>
+          <li><a class="link-secondary text-decoration-none" href="routing1.html">Trip Manager</a></li>
+          <li><a class="link-secondary text-decoration-none" href="https://www.lonelyplanet.com/articles/best-places-to-visit-in-india">Blogs</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Resources</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="link-secondary text-decoration-none" href="web1\index.html">Chatbot</a></li>
+          <li><a class="link-secondary text-decoration-none" href="https://www.irctc.co.in/nget/booking/train-list">Find Train</a></li>
+          <li><a class="link-secondary text-decoration-none" href="https://yandex.com/images/">Gallary</a></li>
+          <!-- <li><a class="link-secondary text-decoration-none" href="#">FAQ</a></li> -->
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>About</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="link-secondary text-decoration-none" href="https://github.com/Jairamm">Source Code</a></li>
+          <li><a class="link-secondary text-decoration-none" href="https://www.google.com/maps/place/Balrampur,+Uttar+Pradesh+271201/@27.4145434,82.1593233,13z/data=!3m1!4b1!4m6!3m5!1s0x3999df44520bdbf5:0x8670c5f97c9c2c2d!8m2!3d27.4307473!4d82.1805203!16zL20vMDliOWxo?entry=ttu&g_ep=EgoyMDI0MTAyOS4wIKXMDSoASAFQAw%3D%3D">Location</a></li>
+          <li><a class="link-secondary text-decoration-none" href="#">Terms and Privacy</a></li>
+          <li><a class="link-secondary text-decoration-none" href="#">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="float-end mb-1">
+      <a href="#">Back to top</a>
+    </p>
+  </footer>
+  <script src="placeholder.js"></script>
+  <script src="searchsearch.js"></script>
+</body>
+
+</html>

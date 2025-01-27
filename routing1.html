@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>trip Plan</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="/boot/css/bootstrap.min.css">
+        <script src="/boot/js/bootstrap.min.js"></script>
+<style>
+    .container{
+    position: relative;
+    top: 100px;
+    }
+    body{
+        background-color: yellow;
+    }
+
+</style>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- navbar -->
+<nav class="navbar   fixed-top p-0">
+  <div class="container-fluid  bg-light">
+    <a class="navbar-brand" href="#"><img src="https://img.icons8.com/?size=100&id=Oma9tSIHTMlv&format=png&color=000000" alt="..." height="50px "><span class="text-first-head">Open_world</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><a href="login_sign.html">Login/SignUp</a></h5>
+       
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body second ">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="routing1.html"><img src="https://img.icons8.com/?size=100&id=26075&format=png&color=000000" alt="..." height="30px "> Trip Plan</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="weather.html"><img src="https://img.icons8.com/?size=100&id=59759&format=png&color=000000" alt="..." height="30px "> Weather</a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" href="flight.php"><img src="https://img.icons8.com/?size=100&id=8771&format=png&color=000000" alt="..." height="30px "> Flight</a>
+          <!-- </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#"><img src="https://img.icons8.com/?size=100&id=60605&format=png&color=000000" alt="..." height="30px "> Hotels</a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#"><img src="https://img.icons8.com/?size=100&id=26075&format=png&color=000000" alt="..." height="30px "> ChatBot</a>
+          </li>   -->
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" href="maps.html"><img src="https://img.icons8.com/?size=100&id=8212&format=png&color=000000" alt="..." height="30px "> World Maps</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+             <img src="https://img.icons8.com/?size=100&id=11781&format=png&color=000000"height="30px"  alt="...">  Account
+            </a>
+            <ul class="dropdown-menu first  ">
+              <li><a class="dropdown-item" href="profile.php"><img src="https://img.icons8.com/?size=100&id=25618&format=png&color=000000"height="30px"alt=".."> Profile</a></li>
+              <!-- <li><a class="dropdown-item" href="#"><img src="https://img.icons8.com/?size=100&id=12621&format=png&color=000000"height="30px" alt=".."> Blogs</a></li> -->
+              <li>
+                <a  class="dropdown-item" href="feedback.php"><img src="https://img.icons8.com/?size=100&id=8212&format=png&color=000000"height="30px" alt=".."> Feedback</a>
+              </li>
+              <!-- <li><a class="dropdown-item" href="#"><img src="https://img.icons8.com/?size=100&id=7781&format=png&color=000000"height="30px"alt=".."> FAQ</a></li> -->
+            </ul>
+          </li>
+        </ul>
+        <!-- <form class="d-flex mt-3" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" id ="search" aria-label="Search">
+          <button class="btn btn-outline-success"  type="submit">Search</button>
+        </form> -->
+    </div>
+</div>
+</div>
+</nav>
+<!-- main -->
+<div class="container">
+    <button class="btn btn-outline-danger position-relative top-0 start-0 translate-middle-x "data-bs-toggle="modal" data-bs-target="#staticBackdrop" type="submit">Are You Ready!</button>
+<main>
+    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center ">
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Starting City </h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title"><small class="text-body-secondary fw-light" id="result3"></small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li id="result"></li>
+              <li id="result1"></li>
+              <li id="result2"></li>
+              <li id="result4"></li>
+              <li id="result5"></li>
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-outline-primary">Sign up for free</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Destination City</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title"><small class="text-body-secondary fw-light"id="result9"></small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li id="result6"></li>
+              <li id="result7"></li>
+              <li id="result8"></li>
+              <li id="result10"></li>
+              <li id="result11"></li>
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-primary">Get started</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm border-primary">
+          <div class="card-header py-3 text-bg-primary border-primary">
+            <h4 class="my-0 fw-normal">Plan Info</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title"><small class="text-body-secondary fw-light "id="distanceResult"></small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li><span id="time"></span><span id ="time_m"></span></li>
+              <li id="toll"></li>
+              <li id="tunnel"></li>
+              <li id="br"></li>
+              <li id="name"></li>
+              <li ><span id ="speed"></span><span id="speed_limit"></span></li>
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-primary">Contact us</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- modal -->
+ <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content  bg-warning">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Trip Info ! Enjoy Trip !</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" >
+         <form id="cityForm">
+<div class="row g-3 align-items-center">
+  <div class="col-auto">
+    <label for="city1" class="col-form-label"> From </label>
+  </div>
+  <div class="col-auto">
+    <input type="text" id="city1" class="form-control" aria-describedby="passwordHelpInline">
+  </div>
+  <div class="col-auto">
+    <span id="passwordHelpInline" class="form-text">
+     Start city with ZipCode  .
+    </span>
+  </div>
+</div>
+<hr>
+<div class="row g-3 align-items-center">
+  <div class="col-auto">
+    <label  for="city2" class="col-form-label">To</label> &emsp;
+  </div>
+  <div class="col-auto">
+    <input type="text" id="city2" class="form-control" aria-describedby="passwordHelpInline">
+  </div>
+  <div class="col-auto">
+    <span id="passwordHelpInline" class="form-text">
+     Destination City with ZipCode.
+    </span>
+  </div>
+</div>
+<hr>
+<div class="row g-3 align-items-center">
+  <div class="col-auto">
+    <label for="inputPassword6" class="col-form-label"></label>
+  </div>
+  <div class="col-auto">
+    <input type="number" id="max" class="form-control" aria-describedby="passwordHelpInline" placeholder="Maximax Speed">
+  </div>
+  <div class="col-auto">
+<!-- check box1 -->
+     <div class="form-check" >
+<input class="form-check-input" type="radio"name="myGroup" value="bicycle"  >
+  <label class="form-check-label" for="flexCheckDefault">
+    Bicycle 
+  </label>
+</div>
+<!-- check  -->
+    <div class="form-check" >
+  <input class="form-check-input" type="radio"name="myGroup" value="walk"  >
+  <label class="form-check-label" for="flexCheckDefault">
+    Walk 
+  </label>
+</div>
+<!-- check box2 -->
+<div class="form-check" >
+  <input class="form-check-input" type="radio"name="myGroup" value="drive" id="flexCheckDefault"  >
+  <label class="form-check-label" for="flexCheckDefault">
+    Car 
+  </label>
+</div>
+  <!-- </div> -->
+</div>
+<button class="btn btn-success position-relative top-0 start-50 translate-middle-x "  type="submit" id="submit">Go Now</button> 
+    </form> 
+   </div>
+<!-- javascript code  -->
+ <script>
+
+      const apiKey = "dfb1e45f7e404ed7ac27d278c2c13851";
+      const getCityData = async (city1, city2,maxi,mo)=> {
+        
+        const urls = [
+          `https://api.geoapify.com/v1/geocode/search?text=${city1}&format=json&apiKey=${apiKey}`,
+          `https://api.geoapify.com/v1/geocode/search?text=${city2}&format=json&apiKey=${apiKey}`
+        ];
+
+        try {
+          const responses = await Promise.all(urls.map(url => fetch(url)));
+          const data = await Promise.all(responses.map(response => response.json()));
+
+          if (data[0].results && data[0].results.length > 0 && data[1].results && data[1].results.length > 0) {
+            const city1Data = data[0].results[0];
+            const city2Data = data[1].results[0];
+            
+
+            // Display city details
+            document.getElementById("result").innerHTML = `Country: ${city1Data.country}`;
+            document.getElementById("result1").innerHTML = `State: ${city1Data.state}`;
+            document.getElementById("result2").innerHTML = `Postcode: ${city1Data.postcode}`;
+            document.getElementById("result3").innerHTML = `City Name: ${city1Data.county}`;
+            document.getElementById("result4").innerHTML = `Longitude: ${city1Data.lon}`;
+            document.getElementById("result5").innerHTML = `Latitude: ${city1Data.lat}`;
+
+            document.getElementById("result6").innerHTML = `Country: ${city2Data.country}`;
+            document.getElementById("result7").innerHTML = `State: ${city2Data.state}`;
+            document.getElementById("result8").innerHTML = `Postcode: ${city2Data.postcode}`;
+            document.getElementById("result9").innerHTML = `:City Name ${city2Data.county}`;
+            document.getElementById("result10").innerHTML = `Longitude: ${city2Data.lon}`;
+            document.getElementById("result11").innerHTML = `Latitude: ${city2Data.lat}`;
+
+            // Fetch and display distance between cities
+            getDistance(city1Data.lat, city1Data.lon, city2Data.lat, city2Data.lon,maxi ,mo);
+          } else {
+            document.getElementById("result").innerHTML = "No results found for the cities.";
+          }
+        } catch (error) {
+          console.error("Failed to fetch data:", error);
+          document.getElementById("result").innerHTML = "Failed to fetch data.";
+        }
+      };
+
+      const getDistance = async (lat1, lon1, lat2, lon2,maxi,mo) => {
+        const url = `https://api.geoapify.com/v1/routing?waypoints=${lat1},${lon1}|${lat2},${lon2}&details=route_details&mode=${mo}&max_speed=${maxi}&details=tollways&details=roadshields&&apiKey=${apiKey}`;
+
+        try {
+          const response = await fetch(url);
+          const data = await response.json();
+          console.log(data);
+
+          if (data.features && data.features.length > 0) {
+            const distance = data.features[0].properties.distance;
+            document.getElementById("distanceResult").innerHTML = `Distance ${(distance / 1000).toFixed(2)} km.`;
+            const time =data.features[0].properties.time
+              document.getElementById("time").innerHTML = `Time: ${Math.round(time/3600)} Hours /`; 
+              document.getElementById("time_m").innerHTML = `Time: ${Math.round(time/60)} Min`;
+              document.getElementById("toll").innerHTML = `Mode: ${data.features[0].properties.mode} `;
+              document.getElementById("tunnel").innerHTML = `Tunnel : ${ data.features[0].properties.legs[0].steps[10].tunnel} `;
+              document.getElementById("br").innerHTML = `Bridge: ${ data.features[0].properties.legs[0].steps[10].bridge} `;
+              document.getElementById("name").innerHTML = `Road Name: ${ data.features[0].properties.legs[0].steps[10].name} `;
+              document.getElementById("speed").innerHTML = `Speed: ${ data.features[0].properties.legs[0].steps[10].speed} `;
+              document.getElementById("speed_limit").innerHTML = `Limit: ${ data.features[0].properties.legs[0].steps[10].speed_limit} `;
+            
+      
+          } else {
+            document.getElementById("distanceResult").innerHTML = "Unable to calculate distance.";
+          }
+        } catch (error) {
+          console.error("Failed to fetch distance:", error);
+          document.getElementById("distanceResult").innerHTML = "Failed to calculate distance.";
+        }
+      };
+
+      document.getElementById("submit").addEventListener("click", (event) => {
+        event.preventDefault();
+        const city1 = document.getElementById("city1").value;
+        const city2 = document.getElementById("city2").value;
+       const maxi = document.getElementById("max").value;
+       const mo = document.querySelector('input[name="myGroup"]:checked').value;
+          
+
+        if (city1 && city2 && maxi)
+        {
+          getCityData(city1,city2,maxi,mo);
+          // window.location.href="";
+          // location.reload();
+        }
+      });
+
+
+      
+ ( function auto (){
+    const urlParams = new URLSearchParams(window.location.search);
+  const city1 = urlParams.get('city1');
+  const city2 = urlParams.get('city2');
+  const max = urlParams.get('max');
+  const mode = urlParams.get('mode');
+
+  if (city1 && city2 && max && mode) {
+    getCityData(city1, city2,max ,mode);
+  }
+})();
+   
+    </script>
+</body>
+</html>

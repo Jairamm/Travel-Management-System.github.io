@@ -1,0 +1,169 @@
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+   line-height: 1.6;
+ 
+}
+
+body {
+  background-color: #f4f6f9;
+  color: #333;
+}
+
+/* Container */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header Section */
+.search-section {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.search-section h1 {
+  color: #333;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.input-group input {
+  padding: 10px;
+  flex: 1;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.input-group button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.input-group button:hover {
+  background-color: #111920;
+}
+
+/* Results Section */
+.results-section {
+  margin-top: 20px;
+}
+
+.results-section h2 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Flight Cards */
+.flights-container {
+  display: grid;
+  gap: 15px;
+}
+
+.flight-item {
+  background-color: #fff;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.flight-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.flight-header strong {
+  font-size: 1.2em;
+}
+
+.flight-details {
+  margin-top: 5px;
+}
+
+.flight-details div {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  line-height: 1.6;
+}
+
+.flight-details .duration {
+  color: #555;
+  font-weight: bold;
+}
+body {
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+.flight-item,
+.flight-details {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+ 
+}
+.flight-item {
+  cursor: pointer;
+   line-height: 1.6;
+}
+.flight-header {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.flight-details {
+  display: none;
+   line-height: 1.6;
+}
+button {
+  padding: 10px 15px;
+  border: none;
+  background: #007bff;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  background: #2b90fc;
+}
+
+#com {
+  border-radius: 10px;
+  box-shadow: 6px 5px 13px 7px;
+  color: blue;
+  background-color: lightblue;
+}
+body {
+  background-color: #9fba7c;
+}
+
+h2 {
+  text-align: center;
+}
+.small{
+  background-color: red;
+}
