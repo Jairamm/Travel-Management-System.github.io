@@ -38,25 +38,32 @@ Here are some visual representations of the system:
 
 
 2. **Login Page**
-   ![Login Page](path/to/login_page_image.png)
+   ![image](https://github.com/user-attachments/assets/745d34fb-6564-4d4b-bea4-27e2456f5450)
+
 
 3. **Home Page**
-   ![Home Page](path/to/home_page_image.png)
+   ![image](https://github.com/user-attachments/assets/0b879b0f-3dd9-4fec-805a-467e319b70b7)
+
 
 4. **Trip-Plan Page**
-   ![Trip Plan Page](path/to/trip_plan_page_image.png)
+   ![image](https://github.com/user-attachments/assets/87ea881d-8968-46a8-9a28-02bbf2f4d0d6)
+
 
 5. **Weather Service**
-   ![Weather Service](path/to/weather_service_image.png)
+   ![image](https://github.com/user-attachments/assets/de970b55-354c-49db-9e34-2576b463d1a1)
+
 
 6. **Flight Service**
-   ![Flight Service](path/to/flight_service_image.png)
+   ![image](https://github.com/user-attachments/assets/131b95ae-9b9b-4e69-a0ec-0c9f1a33f671)
+
 
 7. **Hotels Page**
-   ![Hotels Page](path/to/hotels_page_image.png)
+   ![image](https://github.com/user-attachments/assets/aa5f4e91-aeb1-453c-8dbe-79d729a2be8c)
+
 
 8. **Profile Page**
-   ![Profile Page](path/to/profile_page_image.png)
+   ![image](https://github.com/user-attachments/assets/4ed578f8-0498-491e-84c7-98acae23a80d)
+
 
 ---
 
