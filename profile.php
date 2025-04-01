@@ -143,6 +143,7 @@ if (isset($_SESSION["user"])) {
   </head>
 
   <body>
+    
     <link href="maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" />
     <script src="maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -156,15 +157,15 @@ if (isset($_SESSION["user"])) {
               <img src="all/<?php echo $res['image']; ?> " value="<?php $res['image']; ?>" alt="Add Picture"id='ran' />
 
               <!-- <div class="file btn btn-lg btn-primary">
-               <a href="logout.php">Logout</a>
-              </div> -->
+                </div> -->
+                
 
             </div>
           </div>
           <div class="col-md-6">
             <div class="profile-head">
               <h5><?php echo $res['name']; ?></h5>
-              <h6><?php echo $res['profession']; ?></h6>
+              <h6>(<?php echo $res['gender']; ?>)</h6>
               <p class="proile-rating"><b>ID : <span><?php echo $res['id']; ?></span></b></p>
               <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item">
@@ -189,14 +190,11 @@ if (isset($_SESSION["user"])) {
             <div class="profile-work">
               <p></p>
               <a href="logout.php" style="color:red "><img src="https://img.icons8.com/?size=100&id=ydJtUOZO_dfS&format=png&color=000000"height='40px' alt="">Logout</a><br />
-              <a href="" style="color:green"></a><br />
-              <a href=""></a>
               <p></p>
-              <a href="" style="color:green"></a><br />
-              <a href="" style="color:green"></a><br />
-              <a href=""></a><br />
-              <a href=""></a><br />
-              <a href=""></a><br />
+             <big><a style="color:black">Country</a> : <a ><?php echo $res['country']; ?></a><br>
+              <a style="color:black">State</a> : <a ><?php echo $res['state']; ?></a><br />
+              <!-- <a style="color:black">Zip</a> : <a ><?php echo $res['zip']; ?></a><br /> -->
+             </big> 
             </div>
           </div>
           <div class="col-md-8">
@@ -241,6 +239,7 @@ if (isset($_SESSION["user"])) {
                   <div class="col-md-6">
                     <p><?php echo $res['profession']; ?></p>
                   </div>
+                  
                 </div>
                 
               </div>
@@ -296,7 +295,8 @@ if (isset($_SESSION["user"])) {
           </div>
         </div>
       </form>
-
+        <a href="index1.html" type="button"><button class="btn btn-outline-success " type="button">HOME</button></a>
+<!-- <a href="index1.html" type="button"><button>HOME</button></a> -->
     </div>
     <?php
 } else {

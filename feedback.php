@@ -29,165 +29,87 @@
   <html>
     <
       <!-- navbar  -->
-      <nav class="navbar fixed-top p-0">
-        <div class="container-fluid second">
-          <a class="navbar-brand" href="#"
-            ><img
-              src="https://img.icons8.com/?size=100&id=Oma9tSIHTMlv&format=png&color=000000"
-              alt="..."
-              height="50px "
-            /><span class="text-first-head">Open_world</span></a
-          >
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasNavbar"
-            aria-controls="offcanvasNavbar"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div
-            class="offcanvas offcanvas-end"
-            tabindex="-1"
-            id="offcanvasNavbar"
-            aria-labelledby="offcanvasNavbarLabel"
-          >
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-                <a href="form.html">Login/SignUp</a>
-              </h5>
+       <nav class="navbar   fixed-top p-0">
+    <div class="container-fluid  bg-light">
+      <a class="navbar-brand" href="#"><img
+          src="https://img.icons8.com/?size=100&id=Oma9tSIHTMlv&format=png&color=000000" alt="..." height="50px "><span
+          class="text-first-head">Open_world</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">  <a href="index1.html" type="button"><button class="btn btn-outline-success " type="button">HOME</button></a></h5>
 
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="offcanvas"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="offcanvas-body second">
-              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                <li class="nav-item">
-                  <a
-                    class="nav-link active"
-                    aria-current="page"
-                    href="trips.html"
-                    ><img
-                      src="https://img.icons8.com/?size=100&id=26075&format=png&color=000000"
-                      alt="..."
-                      height="30px "
-                    />
-                    Trip Plan</a
-                  >
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body second ">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="routing1.html"><img
+                  src="https://img.icons8.com/?size=100&id=26075&format=png&color=000000" alt="..." height="30px "> Trip
+                Plan</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="weather.html"><img
+                  src="https://img.icons8.com/?size=100&id=59759&format=png&color=000000" alt="..." height="30px ">
+                Weather</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="flight.php"><img src="https://img.icons8.com/?size=100&id=8771&format=png&color=000000"
+                  alt="..." height="30px "> Flight</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="flight.php"><img src="https://img.icons8.com/?size=100&id=60605&format=png&color=000000"
+                  alt="..." height="30px "> Hotels</a>
+            </li> -->
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="#"><img src="https://img.icons8.com/?size=100&id=26075&format=png&color=000000"
+                  alt="..." height="30px "> ChatBot</a>
+            </li> -->
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="maps.html"><img
+                  src="https://img.icons8.com/?size=100&id=8212&format=png&color=000000" alt="..." height="30px "> World
+                Maps</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <img src="https://img.icons8.com/?size=100&id=11781&format=png&color=000000" height="30px" alt="...">
+                Account
+              </a>
+              <ul class="dropdown-menu first  ">
+                <li><a class="dropdown-item" href="profile.php"><img
+                      src="https://img.icons8.com/?size=100&id=25618&format=png&color=000000" height="30px" alt="..">
+                    Profile</a></li>
+                <li><a class="dropdown-item" href="https://www.lonelyplanet.com/articles/best-places-to-visit-in-india"><img
+                      src="https://img.icons8.com/?size=100&id=12621&format=png&color=000000" height="30px" alt="..">
+                    Blogs</a></li>
+                <li>
+                  <a class="dropdown-item" href="feedback.php"><img
+                      src="https://img.icons8.com/?size=100&id=8212&format=png&color=000000" height="30px" alt="..">
+                    Feedback</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="weather.html"
-                    ><img
-                      src="https://img.icons8.com/?size=100&id=59759&format=png&color=000000"
-                      alt="..."
-                      height="30px "
-                    />
-                    Weather</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="weather.html"
-                    ><img
-                      src="https://img.icons8.com/?size=100&id=8771&format=png&color=000000"
-                      alt="..."
-                      height="30px "
-                    />
-                    Flight</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="weather.html"
-                    ><img
-                      src="https://img.icons8.com/?size=100&id=60605&format=png&color=000000"
-                      alt="..."
-                      height="30px "
-                    />
-                    Hotels</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="weather.html"
-                    ><img
-                      src="https://img.icons8.com/?size=100&id=26075&format=png&color=000000"
-                      alt="..."
-                      height="30px "
-                    />
-                    ChatBot</a
-                  >
-                </li>
-                <li class="nav-item dropdown">
-                  <a
-                    class="nav-link dropdown-toggle"
-                    href="Account.html"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    <img
-                      src="https://img.icons8.com/?size=100&id=11781&format=png&color=000000"
-                      height="30px"
-                      alt="..."
-                    />
-                    Account
-                  </a>
-                  <ul class="dropdown-menu first">
-                    <li>
-                      <a class="dropdown-item" href="profile.html"
-                        ><img
-                          src="https://img.icons8.com/?size=100&id=25618&format=png&color=000000"
-                          height="30px"
-                          alt=""
-                        />
-                        Profile</a
-                      >
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href=""
-                        ><img
-                          src="https://img.icons8.com/?size=100&id=12621&format=png&color=000000"
-                          height="30px"
-                          alt=""
-                        />
-                        Blogs</a
-                      >
-                    </li>
-                    <li>
-                      <hr class="dropdown-divider" />
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#"
-                        ><img
-                          src="https://img.icons8.com/?size=100&id=7781&format=png&color=000000"
-                          height="30px"
-                          alt=""
-                        />
-                        FAQ</a
-                      >
-                    </li>
-                  </ul>
-                </li>
+                <li><a class="dropdown-item" href="web1\index.html"><img
+                      src="https://img.icons8.com/?size=100&id=7781&format=png&color=000000" height="30px" alt="..">
+                    Live Chat</a></li>
               </ul>
-              <form class="d-flex mt-3" role="search">
-                <input
-                  class="form-control me-2"
-                  type="search"
-                  placeholder="Search"
-                  aria-label="Search"
-                />
-                <button class="btn btn-outline-success" type="submit">
-                  Search
-                </button>
-              </form>
-            </div>
+            </li>
+          </ul>
+          <form class="d-flex mt-3" role="search" action="" >
+            <input class="form-control me-2 search-box" id="search" name="searchable " type="search"
+              placeholder="Search Services" id="search" aria-label="Search" autocomplete="off">
+            <button class="btn btn-outline-success" type="button" onclick="sebtn()"id='sea' >Search</button>
+          </form>
+          <br>
+          <div id="result-box">
           </div>
         </div>
-      </nav>
+      </div>
+    </div>
+  </nav>
       <!-- main -->
       <div class="container">
         <div class="py-5 text-center">

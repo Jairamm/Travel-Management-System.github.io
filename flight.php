@@ -11,6 +11,7 @@
 </head>
 
 <body>
+  <a href="index1.html" type="button"><button class="btn btn-outline-success " type="button">HOME</button></a>
   <div class="container" id="com">
     <!-- Search Section -->
 
@@ -33,11 +34,11 @@
   <!-- Flight Details Section (Details Page) -->
   <div class="details-section" id="details-page" style="display: none;">
     <button id="back-btn">Back to Flights</button>
-      <button id="send-btn" onclick="send()">Send TO ME</button><br><br>
+    <button id="send-btn" onclick="send()">Send TO ME</button><br><br>
     <button type="click" onclick="show()" class="small">Check More</button>
 
 
- 
+
 
     <h2><u>Flight Details</u></h2>
 
@@ -46,30 +47,30 @@
   </div>
 
 
-<div id="conto"></div>
+  <div id="conto"></div>
 
   <script src="script.js"></script>
   <script>
-  <?php
-  $data = $_POST['data'];
-  require __DIR__ . '/vendor/autoload.php';
-  use Twilio\Rest\Client;
-  $sid = "AC86e2084b86d7ec432b75d7e5a2dfc6f7";
-  $token = "4eb0db443f3761b6da41a66f5d8040c6";
-  $client = new Client($sid, $token);
-  $message = $client->messages->create(
-    '+917275359879',
-    [
-      'from' => '+19199482513',
-      'body' => $data
+    <?php
+    $data = $_POST['data'];
+    require __DIR__ . '/vendor/autoload.php';
+    use Twilio\Rest\Client;
+    $sid = "AC9a5563502b08a5583f1d49a32e4a9c24";
+    $token = "7d21a7e7dead33715538405bb75e2a94";
+    $client = new Client($sid, $token);
+    $message = $client->messages->create(
+      +918840205753,
+      [
+        'from' => '+12087684633',
+        'body' => $data
       ]
-     );
-  if ($message) {
-    echo "Message Sent now";
-  } else {
-    echo "Something went wrong";
-  }
- ?>
+    );
+    if ($message) {
+      echo "Message Sent now";
+    } else {
+      echo "Something went wrong";
+    }
+    ?>
   </script>
 
 

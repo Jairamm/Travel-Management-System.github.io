@@ -35,7 +35,7 @@
                         $N = $res["name"];
                         if ($password == $b && $email == $a) {
                                 $_SESSION["user"] = $ids;
-                                $_SESSION["user123"] = $N;
+                                $_SESSION["user123"] = $N; //name 
                                 // header("Location: profile.php?idd=$ids");
                                 echo "<script>alert('login Successfully Completed'); window.location.href='index1.html';</script>";
                                 exit();
