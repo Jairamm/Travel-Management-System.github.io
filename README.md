@@ -82,7 +82,7 @@ Here are some visual representations of the system:
    ![image](https://github.com/user-attachments/assets/4ed578f8-0498-491e-84c7-98acae23a80d)
 
 
-[![Watch the demo](C:\Users\HP\Desktop\Travelor\home.png)](https://www.youtube.com/watch?v=3HpllTFDXHc)
+[![Travel Management System Tutorials]]([https://youtu.be/IhFKziOD72g?si=NEL5tXmOjq6NPt91](https://youtu.be/3HpllTFDXHc?si=6x3pwNV-3C3mym9l))
 
 
 
