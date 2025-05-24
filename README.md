@@ -1,11 +1,24 @@
-<<<<<<< HEAD
-# Travelor
-Full Stack Project on PHP language | Use  Advanced technology such as Api ,HTML5 ,CSS3 and Node JS Runtime   
-=======
-# Travel Management System
+# 🌍 Travel Management System
 
-## Project Overview
-The Travel Management System is a comprehensive platform designed to simplify travel planning by integrating multiple functionalities into a single system. This project addresses the inefficiencies of fragmented travel planning by providing real-time updates on weather, flight schedules, distance calculations, hostel information, and map navigation.
+A **complete web-based travel planner** built using PHP, MySQL, HTML5, CSS3, Bootstrap, and JavaScript. This system helps users plan trips efficiently by providing integrated features like live weather updates, distance calculation, flight information, hotel details, user management, and live chat.
+
+---
+
+## 📌 Project Overview
+
+The Travel Management System simplifies the travel planning process by combining multiple features into a single platform. It eliminates the need for separate apps or websites for flights, weather, distance, and accommodation.
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer      | Technology                       |
+|------------|----------------------------------|
+| Frontend   | HTML5, CSS3, Bootstrap, JavaScript |
+| Backend    | PHP (Core PHP)                   |
+| Database   | MySQL (phpMyAdmin via XAMPP)     |
+| APIs       | OpenWeatherMap API, Flight API, Map API |
+| Server     | Apache (via XAMPP)               |
 
 ---
 
