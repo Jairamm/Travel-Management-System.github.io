@@ -59,7 +59,7 @@ Here are some visual representations of the system:
 
 
 3. **Home Page**
-   ![image](https://github.com/user-attachments/assets/0b879b0f-3dd9-4fec-805a-467e319b70b7)
+   ![image](https://github.com/user-attachments/assets/0b879b0f-3dd9-4fec-805a-467e319b70b)
 
 
 4. **Trip-Plan Page**
