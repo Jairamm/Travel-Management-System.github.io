@@ -64,6 +64,9 @@ Here are some visual representations of the system:
 8. **Profile Page**
    ![image](https://github.com/user-attachments/assets/4ed578f8-0498-491e-84c7-98acae23a80d)
 
+   [![Watch the demo](https://img.youtube.com/vi/dQw4w9WgXcQ/0.jpg)]([https://www.youtube.com/watch?v=dQw4w9WgXcQ](https://www.youtube.com/watch?v=3HpllTFDXHc))
+
+
 
 ---
 
