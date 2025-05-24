@@ -65,7 +65,7 @@ Here are some visual representations of the system:
    ![image](https://github.com/user-attachments/assets/4ed578f8-0498-491e-84c7-98acae23a80d)
 
 
-[![Watch the demo]([https://img.youtube.com/vi/dQw4w9WgXcQ/0.jpg](https://github.com/user-attachments/assets/90837df2-b7c7-4465-b111-3be04682dc7d))]([https://www.youtube.com/watch?v=dQw4w9WgXcQ](https://www.youtube.com/watch?v=dQw4w9WgXcQ](https://www.youtube.com/watch?v=3HpllTFDXHc))
+[![Watch the demo](https://img.youtube.com/vi/3HpllTFDXHc/0.jpg)](https://www.youtube.com/watch?v=3HpllTFDXHc)
 
 
 
