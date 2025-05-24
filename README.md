@@ -69,7 +69,7 @@ Here are some visual representations of the system:
    ![image](https://github.com/user-attachments/assets/4ed578f8-0498-491e-84c7-98acae23a80d)
 
 
-[![Watch the demo](https://img.youtube.com/vi/3HpllTFDXHc/0.jpg)](https://www.youtube.com/watch?v=3HpllTFDXHc)
+[![Watch the demo](C:\Users\HP\Desktop\Travelor\home.png)](https://www.youtube.com/watch?v=3HpllTFDXHc)
 
 
 
