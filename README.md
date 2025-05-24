@@ -81,8 +81,9 @@ Here are some visual representations of the system:
 8. **Profile Page**
    ![image](https://github.com/user-attachments/assets/4ed578f8-0498-491e-84c7-98acae23a80d)
 
+[![Watch the demo](https://github.com/user-attachments/assets/dc44d2a0-93f4-4d44-827f-587faf53302b)](https://youtu.be/3HpllTFDXHc?si=J-ulmDbtWE9Ex6Jy)
 
-[![Travel Management System Tutorials]]([https://youtu.be/IhFKziOD72g?si=NEL5tXmOjq6NPt91](https://youtu.be/3HpllTFDXHc?si=6x3pwNV-3C3mym9l))
+
 
 
 
